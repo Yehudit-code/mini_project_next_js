@@ -1,9 +1,29 @@
-import Image from "next/image";
+import Header from "./components/Header/Header";
+import Card from "./components/Card/ProductCard";
+import ProductGrid from "./components/Card/ProductGrid";
 
-export default function Home() {
+export default async function Home() {
+  // connect directly to DB instead of fetching from API
+  // await connectDB();
+  const products = [""]
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-     
-    </div>
+    <main>
+      {/* <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "20px",
+          justifyContent: "center",
+          padding: "2rem",
+          backgroundColor: "#fdfbf7",
+        }}
+      > */}
+        {/* {products.map((p: any) => (
+          <Card key={p._id} {...p} />
+        ))} */}
+      {/* </div> */}
+      <ProductGrid />
+    </main>
   );
 }
